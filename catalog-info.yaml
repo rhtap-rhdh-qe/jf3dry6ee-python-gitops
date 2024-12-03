@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: jf3dry6ee-python-gitops
+  description: This is GitOps manifest for jf3dry6ee-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: jf3dry6ee-python
+    backstage.io/kubernetes-id: jf3dry6ee-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: jf3dry6ee-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:jf3dry6ee-python
